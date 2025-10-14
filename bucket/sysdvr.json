@@ -9,13 +9,8 @@
             "hash": "E827AFC02C0D1D46C08880CD67713C7012752C021C7AD1F7347DF16170449162"
         }
     },
-    "bin": "SysDVR-Client-Windows-x64-with-framework/SysDVR-Client.exe",
-    "shortcuts": [
-        [
-            "SysDVR-Client-Windows-x64-with-framework/SysDVR-Client.exe",
-            "SysDVR Client"
-        ]
-    ],
+    "bin": "SysDVR-Client.exe",
+    "shortcuts": [["SysDVR-Client.exe", "SysDVR Client"]],
     "checkver": {
         "url": "https://github.com/exelix11/SysDVR/releases/latest",
         "regex": "tag/v([\\d.]+)"
