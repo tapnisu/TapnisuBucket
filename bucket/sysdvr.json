@@ -1,16 +1,21 @@
 {
-    "version": "6.2.1",
+    "version": "6.2.2",
     "description": "Stream and record gameplay from your Nintendo Switch via USB or network.",
     "homepage": "https://github.com/exelix11/SysDVR",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/exelix11/SysDVR/releases/download/v6.2.1/SysDVR-Client-Windows-x64-with-framework.7z",
-            "hash": "E827AFC02C0D1D46C08880CD67713C7012752C021C7AD1F7347DF16170449162"
+            "url": "https://github.com/exelix11/SysDVR/releases/download/v6.2.2/SysDVR-Client-Windows-x64-with-framework.7z",
+            "hash": "854555a1649b159d2648baec3a74de617a39b57c07b0685f1d46ebd894251ef7"
         }
     },
     "bin": "SysDVR-Client.exe",
-    "shortcuts": [["SysDVR-Client.exe", "SysDVR Client"]],
+    "shortcuts": [
+        [
+            "SysDVR-Client.exe",
+            "SysDVR Client"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/exelix11/SysDVR/releases/latest",
         "regex": "tag/v([\\d.]+)"
