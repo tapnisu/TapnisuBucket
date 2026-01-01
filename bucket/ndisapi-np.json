@@ -1,0 +1,43 @@
+{
+    "version": "3.6.2.1",
+    "description": "Windows Packet Filter (WinpkFilter) driver and NDISAPI library.",
+    "homepage": "https://github.com/wiresock/ndisapi",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wiresock/ndisapi/releases/download/v3.6.2/Windows.Packet.Filter.3.6.2.1.x64.msi#/setup.msi",
+            "hash": "9c388c0b7f189f7fa98720bae2caecf7d64f30910838b80b438ecf8956b8502c"
+        },
+        "32bit": {
+            "url": "https://github.com/wiresock/ndisapi/releases/download/v3.6.2/Windows.Packet.Filter.3.6.2.1.x86.msi#/setup.msi",
+            "hash": "ff882c295f9bb0c4465b179e912ad2d2c41eadc053142bd2f125f49a85ee4e1f"
+        },
+        "arm64": {
+            "url": "https://github.com/wiresock/ndisapi/releases/download/v3.6.2/Windows.Packet.Filter.3.6.2.1.ARM64.msi#/setup.msi",
+            "hash": "b13c6832c9e5c0c14948bbf5c17ccbe65dff55c0f6069df01494d97ebd1f3d69"
+        }
+    },
+    "installer": {
+        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi\", 'LAUNCH_APP=0', '/qn') -RunAs | Out-Null"
+    },
+    "uninstaller": {
+        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi\", '/qn') -RunAs | Out-Null"
+    },
+    "checkver": {
+        "github": "https://github.com/wiresock/ndisapi",
+        "regex": "tag/v(?<tag>[\\d.]+)\".*Filter.(?<version>[\\d.]+).x64.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wiresock/ndisapi/releases/download/v$matchTag/Windows.Packet.Filter.$version.x64.msi#/setup.msi"
+            },
+            "32bit": {
+                "url": "https://github.com/wiresock/ndisapi/releases/download/v$matchTag/Windows.Packet.Filter.$version.x86.msi#/setup.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/wiresock/ndisapi/releases/download/v$matchTag/Windows.Packet.Filter.$version.ARM64.msi#/setup.msi"
+            }
+        }
+    }
+}

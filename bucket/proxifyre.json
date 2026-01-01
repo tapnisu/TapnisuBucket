@@ -1,0 +1,43 @@
+{
+    "version": "2.1.4",
+    "description": "High-performance SOCKS5 proxifier for Windows built on NDISAPI.",
+    "homepage": "https://github.com/wiresock/proxifyre",
+    "license": "MIT",
+    "depends": "ndisapi-np",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.1.4/ProxiFyre-v2.1.4-x64-signed.zip",
+            "hash": "aa1ae5969e04cae6d7fc4ab865a4429def45db91416d27a5c5e44eff1f11538e"
+        },
+        "32bit": {
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.1.4/ProxiFyre-v2.1.4-x86-signed.zip",
+            "hash": "bd684f62db37f19063d0ccb9e8af9eda0652909ed7f2761f6a77367761ee689d"
+        },
+        "arm64": {
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.1.4/ProxiFyre-v2.1.4-ARM64-signed.zip",
+            "hash": "b171a255ae00f83111255944293209b94cf1843736434d150a995efca03b4926"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\app-config.json\")) {",
+        "    New-Item \"$dir\\app-config.json\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "ProxiFyre.exe",
+    "shortcuts": [["ProxiFyre.exe", "ProxiFyre"]],
+    "persist": "app-config.json",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x64-signed.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-x86-signed.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/wiresock/proxifyre/releases/download/v$version/ProxiFyre-v$version-ARM64-signed.zip"
+            }
+        }
+    }
+}
