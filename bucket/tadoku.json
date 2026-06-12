@@ -1,7 +1,7 @@
 {
     "version": "1.9.6",
     "description": "Blazingly Fast™ Visual Novel tracker",
-    "homepage": "https://github.com/Eroge-Abyss/tadokur",
+    "homepage": "https://github.com/Eroge-Abyss/tadoku",
     "license": "MIT",
     "architecture": {
         "64bit": {
