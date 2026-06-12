@@ -11,11 +11,14 @@
     },
     "bin": "tadoku.exe",
     "shortcuts": [["tadoku.exe", "Tadoku"]],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/Eroge-Abyss/tadoku",
+        "regex": "app-v?([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Eroge-Abyss/tadoku/releases/download/v$version/Tadoku_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/Eroge-Abyss/tadoku/releases/download/app-v$version/Tadoku_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
