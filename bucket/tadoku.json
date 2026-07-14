@@ -1,12 +1,12 @@
 {
-    "version": "1.10.3",
+    "version": "1.10.5",
     "description": "Blazingly Fast™ Visual Novel tracker",
     "homepage": "https://github.com/Eroge-Abyss/tadoku",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Eroge-Abyss/tadoku/releases/download/app-v1.10.3/Tadoku_1.10.3_x64-setup.exe#/dl.7z",
-            "hash": "8a4bc03123ed2055d442c87f84d088d6aeb8fc43805c0a16657a330a4ccccd16"
+            "url": "https://github.com/Eroge-Abyss/tadoku/releases/download/app-v1.10.5/Tadoku_1.10.5_x64-setup.exe#/dl.7z",
+            "hash": "531d6aedc4cfbed0865618e5a9154075b509c9426437105d4dfbfe2d967def68"
         }
     },
     "bin": "tadoku.exe",
