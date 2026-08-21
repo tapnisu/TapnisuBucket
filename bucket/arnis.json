@@ -1,0 +1,24 @@
+{
+    "version": "3.1.0",
+    "description": "Generate any location from the real world in Minecraft with a high level of detail.",
+    "homepage": "https://arnismc.com/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/louis-e/arnis/releases/download/v3.1.0/arnis-windows.exe",
+            "hash": "d7234eed9a84c16f57200536c75e96d99cca8fea44a8d8b23e649d5499961670"
+        }
+    },
+    "bin": "arnis-windows.exe",
+    "shortcuts": [["arnis-windows.exe", "Arnis"]],
+    "checkver": {
+        "github": "https://github.com/louis-e/arnis"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/louis-e/arnis/releases/download/v$version/arnis-windows.exe"
+            }
+        }
+    }
+}
