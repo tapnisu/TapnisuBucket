@@ -1,5 +1,5 @@
 {
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "Spotify, native and fast. One lightweight Rust app for your whole library, local playback, and Spotify Connect on Linux, macOS, and Windows.",
     "homepage": "https://github.com/crmne/fastpotify",
     "license": "MIT",
@@ -7,16 +7,21 @@
         "64bit": {
             "url": "https://github.com/crmne/fastpotify/releases/download/v0.3.0/fastpotify-v0.3.0-x86_64-pc-windows-msvc.zip",
             "hash": "9b5e84e0f6fba4099099ffa2d1862c91e0ef4e816d19918d34b303125d9bb636",
-            "extract_dir": "fastpotify-v0.3.0-x86_64-pc-windows-msvc"
+            "extract_dir": "fastpotify-v0.4.0-x86_64-pc-windows-msvc"
         },
         "arm64": {
             "url": "https://github.com/crmne/fastpotify/releases/download/v0.3.0/fastpotify-v0.3.0-aarch64-pc-windows-msvc.zip",
             "hash": "a3ffce86792e748f86ab4da731f210bd51d1a5b1a4e4b199c6892c72c069d0d9",
-            "extract_dir": "fastpotify-v0.3.0-aarch64-pc-windows-msvc"
+            "extract_dir": "fastpotify-v0.4.0-aarch64-pc-windows-msvc"
         }
     },
     "bin": "fastpotify.exe",
-    "shortcuts": [["fastpotify.exe", "Fastpotify"]],
+    "shortcuts": [
+        [
+            "fastpotify.exe",
+            "Fastpotify"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
