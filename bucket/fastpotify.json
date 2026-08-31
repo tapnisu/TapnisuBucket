@@ -6,12 +6,12 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/crmne/fastpotify/releases/download/v0.4.0/fastpotify-v0.4.0-x86_64-pc-windows-msvc.zip",
-            "hash": "9b5e84e0f6fba4099099ffa2d1862c91e0ef4e816d19918d34b303125d9bb636",
+            "hash": "d90033cec7cce087dc36098cd11d6eaffa466a7a7f61a83b217bbf5c2e05f311",
             "extract_dir": "fastpotify-v0.4.0-x86_64-pc-windows-msvc"
         },
         "arm64": {
             "url": "https://github.com/crmne/fastpotify/releases/download/v0.4.0/fastpotify-v0.4.0-aarch64-pc-windows-msvc.zip",
-            "hash": "a3ffce86792e748f86ab4da731f210bd51d1a5b1a4e4b199c6892c72c069d0d9",
+            "hash": "e9e66da6623d6ecb3a43edff1e3a2fb92d7de8aadc1a75ca0d865c61bbfc8f02",
             "extract_dir": "fastpotify-v0.4.0-aarch64-pc-windows-msvc"
         }
     },
