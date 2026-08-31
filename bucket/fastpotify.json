@@ -1,18 +1,18 @@
 {
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Spotify, native and fast. One lightweight Rust app for your whole library, local playback, and Spotify Connect on Linux, macOS, and Windows.",
     "homepage": "https://github.com/crmne/fastpotify",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/crmne/fastpotify/releases/download/v0.4.0/fastpotify-v0.4.0-x86_64-pc-windows-msvc.zip",
-            "hash": "d90033cec7cce087dc36098cd11d6eaffa466a7a7f61a83b217bbf5c2e05f311",
-            "extract_dir": "fastpotify-v0.4.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/crmne/fastpotify/releases/download/v0.4.1/fastpotify-v0.4.1-x86_64-pc-windows-msvc.zip",
+            "hash": "3916a1a2dfb9db84051a0e95d86b696b03b246a10459afe6cb5b894fe9ecc3d4",
+            "extract_dir": "fastpotify-v0.4.1-x86_64-pc-windows-msvc"
         },
         "arm64": {
-            "url": "https://github.com/crmne/fastpotify/releases/download/v0.4.0/fastpotify-v0.4.0-aarch64-pc-windows-msvc.zip",
-            "hash": "e9e66da6623d6ecb3a43edff1e3a2fb92d7de8aadc1a75ca0d865c61bbfc8f02",
-            "extract_dir": "fastpotify-v0.4.0-aarch64-pc-windows-msvc"
+            "url": "https://github.com/crmne/fastpotify/releases/download/v0.4.1/fastpotify-v0.4.1-aarch64-pc-windows-msvc.zip",
+            "hash": "db7e872e61510f4a5422284a56e9da374689ae21c6b45d63cedb1cdc365eea5b",
+            "extract_dir": "fastpotify-v0.4.1-aarch64-pc-windows-msvc"
         }
     },
     "bin": "fastpotify.exe",
