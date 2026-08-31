@@ -1,0 +1,33 @@
+{
+    "version": "202505152050",
+    "description": "Xbox ISO Creation/Extraction utility. Imported from SourceForge.",
+    "homepage": "https://sourceforge.net/projects/extract-xiso/",
+    "license": "BSL-FISHTANK",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/XboxDev/extract-xiso/releases/download/build-202505152050/extract-xiso-Win64_Release.zip",
+            "hash": "fec88d03c7efd6205ab09be4abba70c0afd0eb27a5709f0a6235b828ba5ac11e",
+            "extract_dir": "artifacts"
+        },
+        "32bit": {
+            "url": "https://github.com/XboxDev/extract-xiso/releases/download/build-202505152050/extract-xiso-Win32_Release.zip",
+            "hash": "93d77014ec07d1038273c8d2f10b773681412e880319aad603b52a2ca64859e7",
+            "extract_dir": "artifacts"
+        }
+    },
+    "bin": "extract-xiso",
+    "checkver": {
+        "github": "https://github.com/XboxDev/extract-xiso",
+        "regex": "build-(?<version>\\d+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/XboxDev/extract-xiso/releases/download/build-$version/extract-xiso-Win64_Release.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/XboxDev/extract-xiso/releases/download/build-$version/extract-xiso-Win32_Release.zip"
+            }
+        }
+    }
+}
