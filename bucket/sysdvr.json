@@ -10,16 +10,8 @@
         }
     },
     "bin": "SysDVR-Client.exe",
-    "shortcuts": [
-        [
-            "SysDVR-Client.exe",
-            "SysDVR Client"
-        ]
-    ],
-    "checkver": {
-        "url": "https://github.com/exelix11/SysDVR/releases/latest",
-        "regex": "tag/v([\\d.]+)"
-    },
+    "shortcuts": [["SysDVR-Client.exe", "SysDVR Client"]],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
