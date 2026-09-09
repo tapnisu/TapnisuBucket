@@ -18,34 +18,20 @@
             "hash": "8adf853fea13e5e646792ef7e3bb69492d34f9d83e4f13d71e98a90981bd17e3"
         }
     },
-    "extract_dir": "PFiles64/ProxiFyre",
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\")) { New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\app-config.json\")) {",
-        "    $config = @(",
-        "        '{',",
-        "        '  \"logLevel\": \"Info\",',",
-        "        '  \"bypassLan\": true,',",
-        "        '  \"proxies\": [',",
-        "        '    {',",
-        "        '      \"appNames\": [],',",
-        "        '      \"socks5ProxyEndpoint\": \"127.0.0.1:1080\",',",
-        "        '      \"supportedProtocols\": [\"TCP\", \"UDP\"]',",
-        "        '    }',",
-        "        '  ]',",
-        "        '}'",
-        "    )",
-        "    $config | Set-Content \"$persist_dir\\app-config.json\" -Encoding Ascii",
-        "}"
-    ],
-    "bin": "ProxiFyre.exe",
-    "shortcuts": [
-        [
-            "ProxiFyre.exe",
-            "ProxiFyre"
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "$msi = Get-Item \"$cachedir\\$app#$version*.msi\"",
+            "Start-Process msiexec.exe -Wait -Verb RunAs -ArgumentList \"/i `\"$($msi.FullName)`\" /norestart\""
         ]
-    ],
-    "persist": "app-config.json",
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "$msi = Get-Item \"$cachedir\\$app#$version*.msi\"",
+            "Start-Process msiexec.exe -Wait -Verb RunAs -ArgumentList \"/x `\"$($msi.FullName)`\" /norestart\""
+        ]
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -60,5 +46,5 @@
             }
         }
     },
-    "notes": "GUI mode is not supported in portable release. Use proxifyre-np instead (not promised to work)."
+    "notes": "Not promised to work. Use proxifyre instead."
 }
