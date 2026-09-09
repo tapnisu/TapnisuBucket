@@ -26,6 +26,12 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/wiresock/ndisapi/releases/download/v$version/Windows.Packet.Filter.$version.1.x64.msi"
+            },
+            "32bit": {
+                "url": "https://github.com/wiresock/ndisapi/releases/download/v$version/Windows.Packet.Filter.$version.1.x86.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/wiresock/ndisapi/releases/download/v$version/Windows.Packet.Filter.$version.1.ARM64.msi"
             }
         }
     }
