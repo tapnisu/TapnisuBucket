@@ -11,12 +11,14 @@
     },
     "installer": {
         "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
             "$msi = Get-Item \"$cachedir\\$app#$version*.msi\"",
             "Start-Process msiexec.exe -Wait -Verb RunAs -ArgumentList \"/i `\"$($msi.FullName)`\" /norestart\""
         ]
     },
     "uninstaller": {
         "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
             "$msi = Get-Item \"$cachedir\\$app#$version*.msi\"",
             "Start-Process msiexec.exe -Wait -Verb RunAs -ArgumentList \"/x `\"$($msi.FullName)`\" /norestart\""
         ]
