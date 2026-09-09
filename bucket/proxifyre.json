@@ -60,5 +60,5 @@
             }
         }
     },
-    "notes": "GUI mode is not supported in portable release. Use proxifyre-np instead (not promised to work)."
+    "notes": "GUI mode is not supported in portable manifest. Use proxifyre-np instead (not promised to work)."
 }
