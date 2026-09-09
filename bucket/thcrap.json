@@ -8,7 +8,10 @@
     "bin": ["thcrap.exe", "thcrap_loader.exe"],
     "shortcuts": [["thcrap.exe", "Thcrap Patcher"]],
     "persist": ["config", "repos", "logs"],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/thpatch/thcrap",
+        "regex": "releases/tag/([\\d-]+)"
+    },
     "autoupdate": {
         "url": "https://github.com/thpatch/thcrap/releases/download/$version/thcrap.zip"
     }
