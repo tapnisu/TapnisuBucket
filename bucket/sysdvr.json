@@ -10,7 +10,12 @@
         }
     },
     "bin": "SysDVR-Client.exe",
-    "shortcuts": [["SysDVR-Client.exe", "SysDVR Client"]],
+    "shortcuts": [
+        [
+            "SysDVR-Client.exe",
+            "SysDVR Client"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

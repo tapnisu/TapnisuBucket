@@ -10,7 +10,12 @@
         }
     },
     "bin": "unlockfps_nc_signed.exe",
-    "shortcuts": [["unlockfps_nc_signed.exe", "Genshin FPS Unlock"]],
+    "shortcuts": [
+        [
+            "unlockfps_nc_signed.exe",
+            "Genshin FPS Unlock"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

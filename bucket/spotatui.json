@@ -10,7 +10,12 @@
         }
     },
     "bin": "spotatui.exe",
-    "shortcuts": [["spotatui.exe", "Spotatui"]],
+    "shortcuts": [
+        [
+            "spotatui.exe",
+            "Spotatui"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/LargeModGames/spotatui"
     },

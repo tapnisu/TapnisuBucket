@@ -10,7 +10,12 @@
         }
     },
     "bin": "arnis-windows.exe",
-    "shortcuts": [["arnis-windows.exe", "Arnis"]],
+    "shortcuts": [
+        [
+            "arnis-windows.exe",
+            "Arnis"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/louis-e/arnis"
     },
