@@ -22,7 +22,22 @@
     "post_install": [
         "$config = \"app-config.json\"",
         "ensure $persist_dir",
-        "if (!(Test-Path \"$persist_dir\\$config\")) { New-Item \"$persist_dir\\$config\" -ItemType File | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\$config\")) {",
+        "    $default_config = @(",
+        "        '{',",
+        "        '  \"logLevel\": \"Info\",',",
+        "        '  \"bypassLan\": true,',",
+        "        '  \"proxies\": [',",
+        "        '    {',",
+        "        '      \"appNames\": [],',",
+        "        '      \"socks5ProxyEndpoint\": \"127.0.0.1:1080\",',",
+        "        '      \"supportedProtocols\": [\"TCP\", \"UDP\"]',",
+        "        '    }',",
+        "        '  ]',",
+        "        '}'",
+        "    )",
+        "    $default_config | Set-Content \"$persist_dir\\$config\" -Encoding Ascii",
+        "}",
         "move-item \"$persist_dir\\$config\" \"$dir\""
     ],
     "pre_uninstall": [
