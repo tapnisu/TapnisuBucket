@@ -19,24 +19,15 @@
         }
     },
     "extract_dir": "PFiles64/ProxiFyre",
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\")) { New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\app-config.json\")) {",
-        "    $config = @(",
-        "        '{',",
-        "        '  \"logLevel\": \"Info\",',",
-        "        '  \"bypassLan\": true,',",
-        "        '  \"proxies\": [',",
-        "        '    {',",
-        "        '      \"appNames\": [],',",
-        "        '      \"socks5ProxyEndpoint\": \"127.0.0.1:1080\",',",
-        "        '      \"supportedProtocols\": [\"TCP\", \"UDP\"]',",
-        "        '    }',",
-        "        '  ]',",
-        "        '}'",
-        "    )",
-        "    $config | Set-Content \"$persist_dir\\app-config.json\" -Encoding Ascii",
-        "}"
+    "post_install": [
+        "$config = \"app-config.json\"",
+        "ensure $persist_dir",
+        "if (!(Test-Path \"$persist_dir\\$config\")) { New-Item \"$persist_dir\\$config\" -ItemType File | Out-Null }",
+        "move-item \"$persist_dir\\$config\" \"$dir\""
+    ],
+    "pre_uninstall": [
+        "ensure $persist_dir",
+        "move-item \"$dir\\app-config.json\" \"$persist_dir\""
     ],
     "bin": "ProxiFyre.exe",
     "shortcuts": [
@@ -45,7 +36,6 @@
             "ProxiFyre"
         ]
     ],
-    "persist": "app-config.json",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
