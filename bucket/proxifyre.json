@@ -1,21 +1,21 @@
 {
-    "version": "2.6.2",
+    "version": "2.6.3",
     "description": "A Windows SOCKS5 proxifier leveraging NDISAPI to transparently route TCP and UDP traffic on a per-app basis.",
     "homepage": "https://github.com/wiresock/proxifyre",
     "license": "AGPL-3.0",
     "depends": "ndisapi-np",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.6.2/ProxiFyre-2.6.2-win-x64.msi",
-            "hash": "41cbbc91fddc68c6308192c14a5f662a7c3e3aa22949ec4287898795c451d301"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.6.3/ProxiFyre-2.6.3-win-x64.msi",
+            "hash": "a3701e75b30916bd74a4e0ed46afc5d17cc839118aebd32d3069b1ae40a8dba0"
         },
         "32bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.6.2/ProxiFyre-2.6.2-win-x86.msi",
-            "hash": "d516a1dd2666c62ebe519a31c55db5fe164686b76207f1862d8d2d65c99e2314"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.6.3/ProxiFyre-2.6.3-win-x86.msi",
+            "hash": "0e91575ae87d621f96eb5b63d6101660b4ea1088250d199394a03ff911ecee9f"
         },
         "arm64": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.6.2/ProxiFyre-2.6.2-win-arm64.msi",
-            "hash": "051006a8c170cb5a16a0cb122f6deccd38fcbc4111b04a75fa5353ca87b4ecf3"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.6.3/ProxiFyre-2.6.3-win-arm64.msi",
+            "hash": "a6d4ed2df20041e7e87c44a412328a77fe6080313b43ccf1b7531ad9aa6cf33f"
         }
     },
     "extract_dir": "PFiles64/ProxiFyre",
