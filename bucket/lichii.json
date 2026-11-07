@@ -1,0 +1,22 @@
+{
+    "version": "build-93",
+    "description": "VERY experimental Nintendo Switch 2 emulator",
+    "homepage": "https://github.com/zortos293/Lichii",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zortos293/Lichii/releases/download/build-93/lichii-windows-x86_64.zip",
+            "hash": "e8b1ef11fa6cbc73d29547944156764c4a24bcc55b5f5f1d5da73baba7d0b933"
+        }
+    },
+    "bin": "eden-cli.exe",
+    "shortcuts": [["lichii.exe", "Lichii"]],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zortos293/Lichii/releases/download/$version/lichii-windows-x86_64.zip"
+            }
+        }
+    }
+}
