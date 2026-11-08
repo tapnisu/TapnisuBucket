@@ -12,8 +12,8 @@
     "bin": "eden-cli.exe",
     "shortcuts": [["lichii.exe", "Lichii"]],
     "checkver": {
-        "github": "https://github.com/zortos293/Lichii",
-        "regex": "/tag/(build-\\d+)"
+        "url": "https://api.github.com/repos/zortos293/Lichii/releases/latest",
+        "jsonpath": "$.tag_name"
     },
     "autoupdate": {
         "architecture": {
